@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:intl/date_symbol_data_local.dart';
 import 'package:note_app/pages/splash_page.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 
@@ -9,8 +8,6 @@ void main() async {
   SharedPreferences preferences = await SharedPreferences.getInstance();
   initScreen = preferences.getInt('initScreen');
   await preferences.setInt('initScreen', 1);
-  //preferences.clear();
-  initializeDateFormatting('en_US');
   runApp(const MyApp());
 }
 
